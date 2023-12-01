@@ -1,4 +1,4 @@
-import { options, input } from '../common.mjs'
+import { options, input, reverse} from '../common.mjs'
 
 const rep = {
   'one': '1',
@@ -12,19 +12,33 @@ const rep = {
   'nine': '9',
 }
 
-const rx = new RegExp('(' + Object.keys(rep).join('|') + ')', 'g')
+// reverse
+const repr = Object.keys(rep).reduce((a, k) => Object.assign(a, { [reverse(k)]: rep[k] }), {})
 
-console.log(rx)
+// console.log(repr)
 
-// TODO: Do not replace all, but just first and last spelled digits
+const rx = new RegExp('(' + Object.keys(rep).join('|') + ')', '')
+
+const rxr = new RegExp('(' + Object.keys(repr).join('|') + ')', '')
+
+// console.log(rx)
+// console.log(rxr)
 
 const res = input
   .split('\n')
-  .map(line => line.replace(rx, (match) => rep[match]))
-  .map(line => Array.from(line)
-     .map(c => parseInt(c))
-     .filter(c => !isNaN(c)))
-  .map(row => [row[0], row[row.length - 1]])
+  .map(line => [
+    line,
+    reverse(line)
+  ])
+  .map(([n, r]) => [
+    n.replace(rx, (match) => rep[match]),
+    r.replace(rxr, (match) => repr[match])
+  ])
+  .map(([n, r]) => [
+    Array.from(n).map(c => parseInt(c)).filter(c => !isNaN(c)),
+    Array.from(r).map(c => parseInt(c)).filter(c => !isNaN(c))
+  ])
+  .map(([n, r]) => [n[0], r[0]])
   .map(row => row[0] * 10 + row[1])
   .reduce((a, i) => a + i, 0)
 
