@@ -1,0 +1,14 @@
+{
+  "name": "advent_of_code_2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts-node": "ts-node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0"
+  }
+}
