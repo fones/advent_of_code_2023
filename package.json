@@ -2,13 +2,14 @@
   "name": "advent_of_code_2023",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "ts-node": "ts-node"
+    "start": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_03/index.mjs --file ./advent/day_03/input.test.txt'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^11.1.0"
+    "commander": "^11.1.0",
+    "nodemon": "^3.0.2"
   }
 }
