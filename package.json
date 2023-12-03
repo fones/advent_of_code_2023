@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_03/index.mjs --file ./advent/day_03/input.test.txt'"
+    "test": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_03/index.mjs --file ./advent/day_03/input.test.txt'",
+    "prod": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_03/index.mjs --file ./advent/day_03/input.txt'"
   },
   "author": "",
   "license": "ISC",
