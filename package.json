@@ -4,13 +4,14 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_03/index.mjs --file ./advent/day_03/input.test.txt'",
-    "prod": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_03/index.mjs --file ./advent/day_03/input.txt'"
+    "test": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_04/index.mjs --file ./advent/day_04/input.test.txt'",
+    "prod": "nodemon --watch ./advent/ --ext txt,mjs,test.txt --exec 'node ./advent/day_04/index.mjs --file ./advent/day_04/input.txt'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "commander": "^11.1.0",
+    "lodash": "^4.17.21",
     "nodemon": "^3.0.2"
   }
 }
